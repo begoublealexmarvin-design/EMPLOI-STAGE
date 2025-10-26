@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devenir Partenaire - Stage & Emploi Étudiant CI</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f8faf9;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(90deg, #ff7f00, #ffffff, #009e60);
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #ff7f00;
+  }
+
+  .hero {
+    text-align: center;
+    background-color: #009e60;
+    color: white;
+    padding: 60px 20px;
+  }
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .form-container h3 {
+    text-align: center;
+    color: #ff7f00;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #009e60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+  }
+
+  .btn-submit:hover {
+    background: #ff7f00;
+  }
+
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Stage & Emploi Étudiant CI</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="entreprises.html">Entreprises</a>
+    <a href="conseils.html">Conseils</a>
+    <a href="profil.html">Profil</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Devenir partenaire</h2>
+  <p>Inscrivez votre entreprise pour publier des offres de stages et emplois pour nos étudiants.</p>
+</section>
+
+<div class="form-container">
+  <h3>Formulaire d’inscription entreprise</h3>
+  <form action="submit_partenaire.php" method="POST">
+    <div class="form-group">
+      <label for="nom">Nom de l'entreprise</label>
+      <input type="text" id="nom" name="nom" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adresse e-mail</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="secteur">Secteur d’activité</label>
+      <input type="text" id="secteur" name="secteur" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message / Informations complémentaires</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Envoyer ma demande</button>
+  </form>
+</div>
+
+<footer>
+  © 2025 Stage & Emploi Étudiant CI | Tous droits réservés
+</footer>
+
+</body>
+</html>

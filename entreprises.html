@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entreprises - Stage & Emploi Étudiant CI</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f8faf9;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(90deg, #ff7f00, #ffffff, #009e60);
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #ff7f00;
+  }
+
+  .hero {
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  }
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .entreprises {
+    max-width: 1100px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .entreprise-card {
+    background: white;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  .entreprise-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .entreprise-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  .entreprise-card h3 {
+    color: #ff7f00;
+    margin-bottom: 8px;
+  }
+
+  .entreprise-card p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .cta, .partner {
+    text-align: center;
+    margin: 70px 0;
+  }
+
+  .cta button, .partner button {
+    background: #009e60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cta button:hover, .partner button:hover {
+    background: #ff7f00;
+  }
+
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Stage & Emploi Étudiant CI</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="entreprises.html">Entreprises</a>
+    <a href="conseils.html">Conseils</a>
+    <a href="profil.html">Profil</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Nos entreprises partenaires</h2>
+  <p>Découvrez les entreprises ivoiriennes qui soutiennent l’emploi et les stages étudiants.</p>
+</section>
+
+<section class="entreprises">
+  <div class="entreprise-card">
+    <img src="https://logo.clearbit.com/orange.ci" alt="Orange CI">
+    <h3>Orange Côte d’Ivoire</h3>
+    <p>Télécommunications, innovation et stages en technologies et marketing.</p>
+  </div>
+  <div class="entreprise-card">
+    <img src="https://logo.clearbit.com/ecobank.com" alt="Ecobank">
+    <h3>Ecobank</h3>
+    <p>Banque panafricaine offrant des opportunités de stage en finance et gestion.</p>
+  </div>
+  <div class="entreprise-card">
+    <img src="https://logo.clearbit.com/mtn.ci" alt="MTN">
+    <h3>MTN CI</h3>
+    <p>Leader dans les télécoms, proposant des stages en communication et IT.</p>
+  </div>
+  <div class="entreprise-card">
+    <img src="https://logo.clearbit.com/nsiaassurance.ci" alt="NSIA">
+    <h3>NSIA Assurance</h3>
+    <p>Entreprise d’assurance offrant des stages en gestion, RH et finance.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Votre entreprise veut publier une offre ?</h2>
+  <button onclick="window.location.href='formulaire_entreprise.html'">Publier une offre</button>
+</section>
+
+<section class="partner">
+  <h2>Devenir partenaire</h2>
+  <p>Rejoignez notre réseau et contribuez à l’insertion professionnelle des étudiants ivoiriens.</p>
+  <button onclick="window.location.href='contact_partenaire.html'">Je veux devenir partenaire</button>
+</section>
+
+<footer>
+  © 2025 Stage & Emploi Étudiant CI | Tous droits réservés
+</footer>
+
+</body>
+</html>

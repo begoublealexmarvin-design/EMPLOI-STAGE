@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil - Stage & Emploi Étudiant</title>
+<style>
+  /* 🎨 PALETTE INSPIRÉE DU DRAPEAU IVOIRIEN */
+  :root {
+    --orange-ci: #f77f00;
+    --green-ci: #0b8457;
+    --white-ci: #ffffff;
+    --gray-bg: #f4f6f5;
+    --text-dark: #222;
+  }
+
+ body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--gray-bg);
+    color: var(--text-dark);
+  }
+
+  /* ===*
+
+  /* === HEADER === */
+  header {
+    background: linear-gradient(90deg, var(--orange-ci), var(--white-ci), var(--green-ci));
+    color: #000;
+    text-align: center;
+    padding: 25px 10px;
+  }
+
+   header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  header img.logo {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--green-ci);
+    text-decoration: underline;
+  }
+
+  /* === HERO SECTION === */
+  .hero {
+    height: 400px;
+    background: linear-gradient(180deg, rgba(247,127,0,0.8), rgba(11,132,87,0.8)),
+                url('images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  }
+
+  .hero h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  .hero button {
+    margin-top: 15px;
+    background: var(--white-ci);
+    color: var(--green-ci);
+    border: 2px solid var(--white-ci);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .hero button:hover {
+    background: var(--green-ci);
+    color: var(--white-ci);
+  }
+
+  /* === FEATURES SECTION === */
+  .features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 60px auto;
+    max-width: 1100px;
+  }
+
+  .card {
+    background: var(--white-ci);
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(247,127,0,0.3);
+  }
+
+  .card h3 {
+    color: var(--orange-ci);
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* === CTA SECTION === */
+  .cta {
+    text-align: center;
+    margin: 70px 0;
+    background: linear-gradient(90deg, var(--green-ci), var(--orange-ci));
+    color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .cta h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .cta button {
+    background: var(--white-ci);
+    color: var(--green-ci);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cta button:hover {
+    background: var(--orange-ci);
+    color: white;
+  }
+
+  /* === FOOTER === */
+  footer {
+    background-color: var(--green-ci);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Stage & Emploi Étudiant - Côte d’Ivoire</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="entreprises.html">Entreprises</a>
+    <a href="conseils.html">Conseils</a>
+    <a href="profil.html">Profil</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Trouve ton stage ou emploi étudiant plus facilement</h2>
+  <p>Connecte-toi avec des entreprises, découvre des opportunités adaptées à ton profil et lance ta carrière dès aujourd’hui.</p>
+  <button onclick="window.location.href='offres.html'">Découvrir les offres</button>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>🎯 Offres fiables</h3>
+    <p>Des opportunités vérifiées et publiées par des entreprises partenaires.</p>
+  </div>
+  <div class="card">
+    <h3>🤝 Mise en relation</h3>
+    <p>Entre étudiants et entreprises pour des stages, emplois et collaborations.</p>
+  </div>
+  <div class="card">
+    <h3>📘 Conseils utiles</h3>
+    <p>Rédaction de CV, préparation d’entretien, orientation et astuces.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Prêt à démarrer ton avenir professionnel ?</h2>
+  <button onclick="window.location.href='profil.html'">Créer mon profil</button>
+</section>
+
+<footer>
+  © 2025 Stage & Emploi Étudiant CI | Tous droits réservés
+</footer>
+
+</body>
+</html>

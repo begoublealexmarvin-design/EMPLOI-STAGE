@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Étudiant | Stage & Emploi CI</title>
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  background: #FFFFFF; /* fond blanc */
+  margin: 0;
+  color: #333;
+  line-height: 1.7;
+}
+
+header {
+  background: #F77F00; /* orange */
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+header h1 { margin: 0; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover { text-decoration: underline; }
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #F77F00; /* titres orange */
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  background: #009E60; /* vert */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover { background: #007a45; }
+
+footer {
+  background-color: #009E60; /* vert */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mon Profil Étudiant</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="entreprises.html">Entreprises</a>
+    <a href="conseils.html">Conseils</a>
+    <a href="profil.html">Profil</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Informations personnelles</h2>
+  <form>
+    <label for="nom">Nom complet</label>
+    <input type="text" id="nom" name="nom" placeholder="Ex: Kouadio Jean">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="exemple@email.com">
+
+    <label for="telephone">Téléphone</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="Ex: +225 01 23 45 67">
+
+    <label for="niveau">Niveau d’études</label>
+    <select id="niveau" name="niveau">
+      <option value="licence">Licence</option>
+      <option value="master">Master</option>
+      <option value="ingenieur">Ingénieur</option>
+      <option value="autre">Autre</option>
+    </select>
+
+    <label for="competences">Compétences / Domaine d’études</label>
+    <textarea id="competences" name="competences" rows="4" placeholder="Ex: Marketing, Développement Web, Gestion de projet"></textarea>
+
+    <button type="submit">Mettre à jour le profil</button>
+  </form>
+</main>
+
+<footer>
+  © 2025 Stage & Emploi Étudiant CI | Tous droits réservés
+</footer>
+
+</body>
+</html>
+
