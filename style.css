@@ -46,3 +46,65 @@ body{font-family:Inter, Arial, sans-serif;margin:0;background:var(--bg);color:#2
   z-index:1200;
   font-weight:600;
 }
+/* TABLETTES (768px et moins) */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features, .offres-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .offre-card {
+    width: 90%;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* SMARTPHONES (480px et moins) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  button, .btn-lire, .btn-postuler {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .card, .offre-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
+
