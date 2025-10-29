@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum Étudiant - Stages & Emplois</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --orange: #f77f00;
+      --vert: #009e60;
+      --blanc: #ffffff;
+      --gris-clair: #f4f4f4;
+      --texte: #333;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--gris-clair);
+      margin: 0;
+      padding: 0;
+      color: var(--texte);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--orange), var(--vert));
+      color: var(--blanc);
+      padding: 15px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: var(--blanc);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    .new-post {
+      background: var(--gris-clair);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .new-post input,
+    .new-post textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .new-post button {
+      background: var(--vert);
+      color: var(--blanc);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .new-post button:hover {
+      background: var(--orange);
+    }
+
+    .post {
+      border-left: 5px solid var(--orange);
+      padding: 15px;
+      margin-bottom: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .post h3 {
+      color: var(--vert);
+      margin-top: 0;
+    }
+
+    .post small {
+      color: #888;
+    }
+
+    .reply-btn {
+      background: none;
+      border: 1px solid var(--vert);
+      color: var(--vert);
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .reply-btn:hover {
+      background: var(--vert);
+      color: var(--blanc);
+    }
+
+    @media screen and (max-width: 768px) {
+      main {
+        width: 90%;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Forum Étudiant 🇨🇮</header>
+
+  <main>
+    <h2>Échanges entre étudiants</h2>
+
+    <section class="new-post">
+      <h3>Créer une nouvelle discussion</h3>
+      <input type="text" id="titre" placeholder="Titre du sujet">
+      <textarea id="message" rows="4" placeholder="Exprimez-vous ici..."></textarea>
+      <button onclick="ajouterPost()">Publier</button>
+    </section>
+
+    <section id="forum">
+      <div class="post">
+        <h3>Comment trouver un bon stage ?</h3>
+        <p>Quels sites ou contacts recommandez-vous pour trouver un stage en Côte d’Ivoire ?</p>
+        <small>Posté par Awa • il y a 2 jours</small><br>
+        <button class="reply-btn">Répondre</button>
+      </div>
+
+      <div class="post">
+        <h3>Des conseils pour réussir un entretien ?</h3>
+        <p>Je cherche des astuces pour bien me préparer à un entretien d’embauche. Vos expériences ?</p>
+        <small>Posté par Koffi • il y a 1 jour</small><br>
+        <button class="reply-btn">Répondre</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function ajouterPost() {
+      const titre = document.getElementById("titre").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if (titre && message) {
+        const forum = document.getElementById("forum");
+        const post = document.createElement("div");
+        post.classList.add("post");
+        post.innerHTML = `
+          <h3>${titre}</h3>
+          <p>${message}</p>
+          <small>Posté à l’instant</small><br>
+          <button class="reply-btn">Répondre</button>
+        `;
+        forum.prepend(post);
+        document.getElementById("titre").value = "";
+        document.getElementById("message").value = "";
+      } else {
+        alert("Merci de remplir tous les champs !");
+      }
+    }
+  </script>
+
+</body>
+</html>
